@@ -1,5 +1,5 @@
 {
-  "name": "helloworld",
+  "name": "threejshelloworld",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,9 +8,17 @@
     "build": "rollup -c",
     "watch": "rollup -c -w"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomreeveclark/threejsHelloWorld.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomreeveclark/threejsHelloWorld/issues"
+  },
+  "homepage": "https://github.com/tomreeveclark/threejsHelloWorld#readme",
   "dependencies": {
     "three": "^0.135.0",
     "web-ifc-viewer": "^1.0.213"
