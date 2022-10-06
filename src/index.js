@@ -6,6 +6,8 @@ import {
     PerspectiveCamera, 
     WebGLRenderer } from 'three';
 
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+
 // 1 The scene
 const scene = new Scene()
 
@@ -56,18 +58,26 @@ blueCube.position.x -= 1;
 scene.add(greenCube);
 scene.add(blueCube);
 
+// Controls
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = true;
+
 function animate() {
-    cubeMesh.rotation.x += 0.01;
-    cubeMesh.rotation.z += 0.01;
+    // cubeMesh.rotation.x += 0.01;
+    // cubeMesh.rotation.z += 0.01;
 
-    greenCube.rotation.x += 0.015;
-    greenCube.rotation.z += 0.015;
+    // greenCube.rotation.x += 0.015;
+    // greenCube.rotation.z += 0.015;
 
-    blueCube.rotation.x += 0.005;
-    blueCube.rotation.z += 0.005;
+    // blueCube.rotation.x += 0.005;
+    // blueCube.rotation.z += 0.005;
 
+    // renderer.render(scene, camera);
+    // requestAnimationFrame(animate);
+
+    controls.update();
     renderer.render(scene, camera);
-    requestAnimationFrame(animate);
+    window.requestAnimationFrame(animate);
 }
  
 animate();
